@@ -20,12 +20,12 @@ loop do
       game.play
     elsif player_1 == "computer"
       game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
-      board.display
+      game.board.display
       game.play
     end
   elsif number_of_players == 2
     game = Game.new
-    board.display
+    game.board.display
     game.play
   end
 
