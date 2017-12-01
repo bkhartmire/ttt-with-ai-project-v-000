@@ -1,5 +1,5 @@
 class Game
-  attr_accessor :board, :player_1, :player_2
+  attr_accessor :board, :player_1, :player_2, :current_player
   WIN_COMBINATIONS = [
     [0,1,2],
     [3,4,5],
@@ -19,9 +19,9 @@ class Game
 
   def current_player
     if self.board.turn_count % 2 == 0
-      @player_1
+      @current_player = player_1
     else
-      @player_2
+      @current_player = player_2
     end
   end
 
