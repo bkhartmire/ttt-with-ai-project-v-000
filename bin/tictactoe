@@ -10,7 +10,6 @@ loop do
 
   if number_of_players == 0
     game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
-    board.display
     game.play
   elsif number_of_players == 1
     puts "Who should go first and be player X? Options are me or computer."
