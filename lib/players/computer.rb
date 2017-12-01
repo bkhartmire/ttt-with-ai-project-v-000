@@ -4,7 +4,7 @@ module Players
       if board.turn_count == 0 || board.turn_count == 2
         corner(board)
       elsif board.turn_count == 1
-        "5"
+        input = "5"
       elsif board.turn_count >= 3
         if win_game(board)
           win_game(board)
